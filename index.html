@@ -1,0 +1,828 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Croshii | Crochet for Everyday Living</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #ffffff;
+      color: #1a1a1a;
+      display: flex;
+      justify-content: center;
+    }
+
+    /* ---------- HEADER ---------- */
+    .site-wrapper {
+      max-width: 1000px;
+      width: 100%;
+      background: #ffffff;
+    }
+
+    header {
+      background: #ffffff;
+      padding: 28px 80px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid #e5e5e5;
+    }
+
+    .logo {
+      font-family: 'Playfair Display', serif;
+      font-size: 28px;
+      font-weight: 400;
+      letter-spacing: -1px;
+    }
+
+    nav a {
+      margin-left: 32px;
+      text-decoration: none;
+      color: #777;
+      font-size: 14px;
+    }
+
+    /* ---------- HERO ---------- */
+    .hero {
+      background: #ffffff;
+      padding: 120px 80px 100px;
+      display: grid;
+      grid-template-columns: 1.2fr 1fr;
+      gap: 80px;
+      align-items: center;
+      position: relative; /* ADD THIS */
+    }
+
+    .hero-text {
+      padding-top: 30px; /* reserves space so text doesn’t move */
+    }
+
+    .hero-logo-absolute {
+      position: absolute;
+      top: 50px;
+      left: -120px;
+
+    }
+
+    .hero-logo-absolute img {
+      width: 740px;   /* increase freely */
+      height: auto;
+      left: 0;
+    }
+
+    .hero-text h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 72px;
+      font-weight: 400;
+      line-height: 1;
+      margin-bottom: 24px;
+    }
+
+    .hero-text p {
+      color: #777;
+      max-width: 420px;
+      margin-bottom: 32px;
+    }
+
+    .hero-text .btn {
+      display: inline-block;
+      padding: 10px 24px;
+      border: 1px solid #000;
+      text-decoration: none;
+      color: #000;
+      font-size: 14px;
+      border-radius: 20px;
+    }
+
+    .hero-image {
+      display: flex;
+      justify-content: flex-start; /* force left */
+      align-items: flex-start;
+    }
+
+    .hero-image img {
+      display: block;
+      width: 100%;
+      max-width: 100%;
+    }
+
+    /* ---------- PRODUCTS ---------- */
+    .products {
+      background: #ffffff;
+      padding: 0px 30px;
+    }
+
+    .products-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr); /* 4 items per row */
+      gap: 20px;
+    }
+
+    .product-card {
+      padding: 12px;
+      max-width: 200px; /* adjust as needed */
+      background: #fff;
+      text-align: center;
+    }
+
+    .product-card img {
+      width: 100%;
+      max-width: 150px;
+      margin-bottom: 12px;
+      border-radius: 8px;
+      background: #eaeaea;
+    }
+
+    @media (max-width: 1200px) {
+      .products-grid {
+        grid-template-columns: repeat(3, 1fr); /* 3 items on smaller screens */
+      }
+    }
+
+    @media (max-width: 900px) {
+      .products-grid {
+        grid-template-columns: repeat(2, 1fr); /* 2 items on tablet */
+      }
+    }
+
+    @media (max-width: 600px) {
+      .products-grid {
+        grid-template-columns: 1fr; /* 1 item on mobile */
+      }
+    }
+
+    .product-card h3 {
+      font-weight: 400;
+      margin-bottom: 4px;
+    }
+
+    .product-card span {
+      font-size: 14px;
+      color: #777;
+    }
+
+    .product-section {
+      max-width: 1000px;
+      margin: 10px auto;
+      padding: 0 20px;
+    }
+    .product-section h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 36px;
+      font-weight: 400;
+      margin-bottom: 30px; /* spacing below heading */
+      text-align: left;
+    }
+    /* ---------- FOOTER ---------- */
+    footer {
+      background: #ffffff;
+      padding: 80px;
+      border-top: 1px solid #e5e5e5;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr); /* 3 equal columns */
+      gap: 40px; /* smaller, consistent gap */
+      padding-bottom: 20px;
+    }
+
+    footer {
+      background: #ffffff;
+      padding: 40px 80px;
+      border-top: 1px solid #e5e5e5;
+      text-align: left;
+    }
+
+    footer h4 {
+      font-size: 12px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      margin-bottom: 16px;
+    }
+
+    footer a {
+      display: block;
+      font-size: 14px;
+      text-decoration: none;
+      color: #777;
+      margin-bottom: 6px;
+    }
+
+    footer .copyright {
+      text-align: center;
+      font-size: 14px;
+      color: #aaa;
+      margin-top: 20px;
+    }
+
+    @media (max-width: 900px) {
+      header, .hero, section.products, footer {
+        padding: 40px 20px;
+      }
+
+      .hero {
+        grid-template-columns: 1fr;
+      }
+
+      .products-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+    .hero-logo img {
+      width: 560px;   /* adjust as needed */
+      height: auto;
+      margin-bottom: 24px;
+      z-index: -10
+    }
+    .order-btn {
+      display: block;
+      align-items: center;   /* vertically centers icon + text */
+      justify-content: center;
+      margin-top: 10px;
+      padding: 8px 16px;
+      background: linear-gradient(135deg, #fef5e6, #5c4033);
+      color: #fff;
+      text-decoration: none;
+      border-radius: 20px;
+      font-size: 14px;
+      transition: background 0.3s;
+      line-height: 1;        /* ensure text doesn't shift */
+    }
+
+    .order-btn:hover {
+      background: linear-gradient(135deg, #7A654F, #556B2F);
+    }
+
+    .order-btn img.icon, 
+    .order-btn svg {
+      width: 16px;          /* icon size */
+      height: 16px;
+      margin-right: 6px;
+      margin-top: 10px;
+      vertical-align: middle; /* key fix for alignment */
+      display: inline-block;  /* ensures proper flex alignment */
+    }
+
+    .share-design {
+      background: #f7f7f7;   /* light background */
+      text-align: center;
+      padding: 40px 20px;
+      margin-top: 30px;
+    }
+
+    .share-design p {
+      font-size: 18px;
+      margin-bottom: 20px;
+      color: #333;
+    }
+
+    .whatsapp-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 12px 24px;
+      background: linear-gradient(135deg, #8B7765, #6B8E23); /* brownish-green */
+      color: #fff;
+      text-decoration: none;
+      border-radius: 30px;
+      font-size: 16px;
+      transition: background 0.3s;
+    }
+
+    .whatsapp-btn:hover {
+      background: linear-gradient(135deg, #7A654F, #556B2F);
+    }
+
+    .whatsapp-btn img.icon {
+      width: 20px;
+      height: 20px;
+      margin-right: 10px;
+      vertical-align: middle;
+      display: inline-block;
+    }
+    .about-us {
+      display: grid;
+      grid-template-columns: 1fr 1fr; /* 2 columns: image + text */
+      gap: 60px;
+      align-items: center;
+      padding: 10px 20px;
+      background: #ffffff;
+    }
+
+    .about-us .about-image img {
+      width: 100%;
+      max-width: 500px;
+      height: auto;
+      border-radius: 12px;
+    }
+
+    .about-us .about-text h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 36px;
+      margin-bottom: 24px;
+    }
+
+    .about-us .about-text p {
+      font-size: 16px;
+      line-height: 1.6;
+      color: #555;
+      margin-bottom: 16px;
+    }
+
+    /* Responsive */
+    @media (max-width: 900px) {
+      .about-us {
+        grid-template-columns: 1fr; /* stack image + text */
+        text-align: center;
+      }
+
+      .about-us .about-text h2 {
+        font-size: 28px;
+      }
+
+      .about-us .about-image img {
+        max-width: 100%;
+        margin: 0 auto;
+      }
+    }
+    .faq {
+      max-width: 1000px;
+      margin: 50px auto;
+      padding: 0 20px;
+    }
+
+    .faq h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 36px;
+      margin-bottom: 30px;
+      text-align: left;
+    }
+
+    .faq-item {
+      margin-bottom: 10px;
+      border-bottom: 1px solid #ddd;
+    }
+
+    .faq-item:nth-child(odd) {
+      background: #f7f7f7; /* light grey for odd items */
+      padding: 10px 15px;
+      border-radius: 8px;
+    }
+
+    .faq-item:nth-child(even) {
+      background: #ffffff; /* white for even items */
+      padding: 10px 15px;
+      border-radius: 8px;
+    }
+
+    /* Keep existing styles for question and answer */
+    .faq-question {
+      background: none;
+      border: none;
+      width: 100%;
+      text-align: left;
+      font-size: 16px;
+      padding: 12px 0;
+      cursor: pointer;
+      outline: none;
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+
+    .faq-question:hover {
+      color: #6B8E23; /* brownish-green highlight */
+    }
+
+    .faq-answer {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s ease;
+      font-size: 14px;
+      color: #555;
+      padding-bottom: 0;
+    }
+
+    .faq-answer p {
+      margin: 8px 0;
+    }
+
+    .craft-process {
+      background: #ffffff;
+      padding: 80px 20px;
+    }
+
+    .craft-container {
+      display: grid;
+      grid-template-columns: 1fr 2fr 1fr; /* left image, center text, right image */
+      align-items: center;
+      gap: 40px;
+    }
+
+    .craft-image img {
+      width: 100%;
+      border-radius: 12px;
+      height: auto;
+    }
+
+    .craft-text {
+      text-align: center;
+    }
+
+    .craft-text h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 36px;
+      margin-bottom: 24px;
+    }
+
+    .craft-text p {
+      font-size: 16px;
+      line-height: 1.6;
+      color: #555;
+      margin-bottom: 16px;
+    }
+
+    /* Responsive for tablets */
+    @media (max-width: 900px) {
+      .craft-container {
+        grid-template-columns: 1fr;
+        text-align: center;
+      }
+
+      .craft-image {
+        margin-bottom: 24px;
+      }
+
+      .craft-text h2 {
+        font-size: 28px;
+      }
+    }
+
+    header nav .order-now-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 8px 16px;
+      margin-left: 24px; /* space from other links */
+      background: linear-gradient(135deg, #5c4033, #2e1f1c); /* dark brown gradient */
+      color: #fff;
+      text-decoration: none;
+      border-radius: 20px;
+      font-size: 14px;
+      transition: background 0.3s;
+    }
+
+    header nav .order-now-btn:hover {
+      background: linear-gradient(135deg, #3e2c21, #1a110d);
+    }
+
+    header nav .order-now-btn img.icon {
+      width: 16px;
+      height: 16px;
+      margin-right: 6px;
+      vertical-align: middle;
+      display: inline-block;
+    }
+    .follow-us .social-link {
+      display: flex;
+      align-items: center; /* vertical alignment */
+      gap: 8px;           /* space between icon and text */
+      margin-top: 7px;
+    }
+
+    .follow-us .social-link img.icon {
+      width: 20px;
+      height: 20px;
+      display: block;      /* removes inline spacing issues */
+    }
+    .social-link-whatsapp img.icon {
+      width: 24px;  /* smaller width */
+      height: 24px; /* smaller height */
+      display: block; /* ensures proper alignment */
+    }
+
+
+  </style>
+</head>
+<body>
+
+<div class="site-wrapper">
+
+<header>
+  <div class="logo">croshii</div>
+  <nav>
+    <a 
+      href="https://wa.me/919256882680?text=Hello%2C%20I%20want%20to%20order%20Product%201" 
+      target="_blank" 
+      class="order-now-btn "
+    >
+    <img src="whatsapp.svg" alt="WhatsApp" class="icon">
+      Order Now
+    </a>
+  </nav>
+</header>
+
+<section class="hero">
+  <div class="hero-text">
+    <div class="hero-logo-absolute">
+      <img src="logo.png" alt="Croshii">
+    </div>
+    <p>Handcrafted crochet pieces designed for everyday comfort and timeless warmth.
+Each Croshii creation is thoughtfully made by hand, celebrating natural textures, slow craft, and the beauty of imperfection.</p>
+    <a href="#" class="btn">Discover</a>
+  </div>
+  <div class="hero-image">
+    <img src="3.png" alt="Crochet product">
+  </div>
+</section>
+<section class="about-us" id="about-us">
+  <div class="about-image">
+    <img src="aboutus.jpg" alt="About Croshii">
+  </div>
+  <div class="about-text">
+    <h2>About Us</h2>
+    <p>
+      Croshii is a brand dedicated to handcrafted crochet creations designed for everyday living. 
+      Every piece is made with love, celebrating natural textures, slow craft, and timeless warmth. 
+      From bags to home decor, each item is thoughtfully created to bring comfort and beauty into your life.
+    </p>
+    <p>
+      Each Croshii creation is carefully crafted using traditional techniques combined with modern designs, ensuring a perfect balance of style and functionality. 
+      We work closely with skilled artisans who share our passion for quality, sustainability, and attention to detail.
+    </p>
+    <p>
+      Our mission is to connect people with unique, handcrafted products that tell a story and last a lifetime. Whether you are looking for the perfect gift or a statement piece for yourself, Croshii offers a range of products that are versatile, elegant, and timeless. 
+      Join us in our journey of creating beauty through craftsmanship, and discover the joy of owning something truly handmade.
+    </p>
+  </div>
+
+</section>
+
+<section class="product-section" id="craft">
+  <h1>Our Products</h1>
+  <div class="products">
+    <div class="products-grid">
+      <!-- 12 product cards -->
+      <div class="product-card">
+        <img src="images/p1.jpg" alt="Product 1">
+        <h3>Product 1</h3>
+        <span>₹1,299</span>
+        <a 
+          href="https://wa.me/919256882680?text=Hello%2C%20I%20want%20to%20order%20Product%201" 
+          target="_blank" 
+          class="order-btn"
+        >
+        <img src="whatsapp.svg" alt="WhatsApp" class="icon">
+          Order Now
+        </a>
+      </div>
+      <div class="product-card">
+        <img src="images/p2.jpg" alt="Product 2">
+        <h3>Product 2</h3>
+        <span>₹1,499</span>
+        <a 
+          href="https://wa.me/919256882680?text=Hello%2C%20I%20want%20to%20order%20Product%202" 
+          target="_blank" 
+          class="order-btn"
+        >
+        <img src="whatsapp.svg" alt="WhatsApp" class="icon">
+          Order Now
+        </a>
+      </div>
+      <div class="product-card">
+        <img src="images/p3.jpg" alt="Product 3">
+        <h3>Product 3</h3>
+        <span>₹2,199</span>
+        <a 
+          href="https://wa.me/919256882680?text=Hello%2C%20I%20want%20to%20order%20Product%203" 
+          target="_blank" 
+          class="order-btn"
+        >
+        <img src="whatsapp.svg" alt="WhatsApp" class="icon">
+          Order Now
+        </a>
+      </div>
+      <div class="product-card">
+        <img src="images/p4.jpg" alt="Product 4">
+        <h3>Product 4</h3>
+        <span>₹1,799</span>
+        <a 
+          href="https://wa.me/919256882680?text=Hello%2C%20I%20want%20to%20order%20Product%204" 
+          target="_blank" 
+          class="order-btn"
+        >
+        <img src="whatsapp.svg" alt="WhatsApp" class="icon">
+          Order Now
+        </a>
+      </div>
+      <div class="product-card">
+        <img src="images/p5.jpg" alt="Product 5">
+        <h3>Product 5</h3>
+        <span>₹1,999</span>
+        <a 
+          href="https://wa.me/919256882680?text=Hello%2C%20I%20want%20to%20order%20Product%205" 
+          target="_blank" 
+          class="order-btn"
+        >
+        <img src="whatsapp.svg" alt="WhatsApp" class="icon">
+          Order Now
+        </a>
+      </div>
+      <div class="product-card">
+        <img src="images/p6.jpg" alt="Product 6">
+        <h3>Product 6</h3>
+        <span>₹2,499</span>
+        <a 
+          href="https://wa.me/919256882680?text=Hello%2C%20I%20want%20to%20order%20Product%206" 
+          target="_blank" 
+          class="order-btn"
+        >
+        <img src="whatsapp.svg" alt="WhatsApp" class="icon">
+          Order Now
+        </a>
+      </div>
+      <div class="product-card">
+        <img src="images/p7.jpg" alt="Product 7">
+        <h3>Product 7</h3>
+        <span>₹1,299</span>
+        <a 
+          href="https://wa.me/919256882680?text=Hello%2C%20I%20want%20to%20order%20Product%207" 
+          target="_blank" 
+          class="order-btn"
+        >
+        <img src="whatsapp.svg" alt="WhatsApp" class="icon">
+          Order Now
+        </a>
+      </div>
+      <div class="product-card">
+        <img src="images/p8.jpg" alt="Product 8">
+        <h3>Product 8</h3>
+        <span>₹1,599</span>
+        <a 
+          href="https://wa.me/919256882680?text=Hello%2C%20I%20want%20to%20order%20Product%208" 
+          target="_blank" 
+          class="order-btn"
+        >
+        <img src="whatsapp.svg" alt="WhatsApp" class="icon">
+          Order Now
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="share-design">
+  <p>If you have any other design, share with us on WhatsApp!</p>
+  <a 
+    href="https://wa.me/919256882680?text=Hello%2C%20I%20want%20to%20share%20a%20design" 
+    target="_blank" 
+    class="whatsapp-btn"
+  >
+    <img src="whatsapp.svg" alt="WhatsApp" class="icon">
+    Share on WhatsApp
+  </a>
+</section>
+<section class="craft-process">
+  <div class="craft-container">
+    <div class="craft-image left-image">
+      <img src="craft3.jpg" alt="Craft Process Left">
+    </div>
+    <div class="craft-text">
+      <h2>How It’s Made</h2>
+      <p>
+        Every Croshii creation starts with the finest premium wool, hand-selected for its softness and durability. 
+        Our skilled artisans take time to meticulously crochet each piece, ensuring every stitch is perfect and each product is unique.
+      </p>
+      <p>
+        From selecting natural fibers to the final finishing touches, our craft process is rooted in tradition, care, and passion for handmade quality.
+      </p>
+    </div>
+    <div class="craft-image right-image">
+      <img src="craft2.jpg" alt="Craft Process Right">
+    </div>
+  </div>
+</section>
+
+<section class="faq" id="faq">
+  <h2>Frequently Asked Questions</h2>
+  <div class="faq-item">
+    <button class="faq-question">1. What is Croshii?</button>
+    <div class="faq-answer">
+      <p>Croshii is a brand dedicated to handcrafted crochet creations designed for everyday living.</p>
+    </div>
+  </div>
+  <div class="faq-item">
+    <button class="faq-question">2. How can I place an order?</button>
+    <div class="faq-answer">
+      <p>You can place an order by clicking the “Order Now” button on the product page, which opens WhatsApp to contact us directly.</p>
+    </div>
+  </div>
+  <div class="faq-item">
+    <button class="faq-question">3. Do you ship internationally?</button>
+    <div class="faq-answer">
+      <p>Currently, we ship within India only. International shipping may be available in the future.</p>
+    </div>
+  </div>
+  <div class="faq-item">
+    <button class="faq-question">4. What payment methods do you accept?</button>
+    <div class="faq-answer">
+      <p>Orders are confirmed through WhatsApp, and payment can be made via UPI, PayTM, or bank transfer.</p>
+    </div>
+  </div>
+  <div class="faq-item">
+    <button class="faq-question">5. Can I customize a product?</button>
+    <div class="faq-answer">
+      <p>Yes! We accept custom design requests. Use the “Share on WhatsApp” button to send your design.</p>
+    </div>
+  </div>
+  <div class="faq-item">
+    <button class="faq-question">6. How long does delivery take?</button>
+    <div class="faq-answer">
+      <p>Delivery usually takes 15-20 business days within India.</p>
+    </div>
+  </div>
+  <div class="faq-item">
+    <button class="faq-question">7. What is your return policy?</button>
+    <div class="faq-answer">
+      <p>We don't accept return once the product build out. Check out catalog before making an order.</p>
+    </div>
+  </div>
+  <div class="faq-item">
+    <button class="faq-question">8. Are your products eco-friendly?</button>
+    <div class="faq-answer">
+      <p>Yes, we use natural and sustainable materials wherever possible.</p>
+    </div>
+  </div>
+  <div class="faq-item">
+    <button class="faq-question">9. How can I track my order?</button>
+    <div class="faq-answer">
+      <p>You will receive a message on WhatsApp with tracking information once your order is shipped.</p>
+    </div>
+  </div>
+  <div class="faq-item">
+    <button class="faq-question">10. Can I gift Croshii products?</button>
+    <div class="faq-answer">
+      <p>Absolutely! Our products make perfect handcrafted gifts. You can also include a custom note on request.</p>
+    </div>
+  </div>
+</section>
+
+
+<footer>
+  <div class="footer-grid">
+    <div>
+      <h4>Company</h4>
+      <a href="#about-us">About Us</a>
+      <a href="#craft">Our Craft</a>
+    </div>
+    <div>
+      <h4>Customer Care</h4>
+      <a href="#faq">FAQs</a>
+    </div>
+    <div>
+      <h4>Contact</h4>
+      <div class="social-link-whatsapp">
+        <a href="https://wa.me/919256882680?text=Hello%2C%20I%20want%20to%20share%20a%20design" 
+      target="_blank"><img src="whatsapp.svg" alt="WhatsApp" class="icon"></a>
+      </div>
+    </div>
+    <div class="follow-us">
+      <h4>Follow Us</h4>
+      <div class="social-link">
+        <a href="https://www.instagram.com/croshii_official/" target="_blank"><img src="instagram.svg" alt="instagram" class="icon"></a>
+      </div>
+    </div>
+  </div>
+  <div class="copyright">
+    &copy; 2025 Croshii. All Rights Reserved.
+  </div>
+</footer>
+
+
+</div>
+<script>
+  const faqQuestions = document.querySelectorAll(".faq-question");
+
+  faqQuestions.forEach((question) => {
+    question.addEventListener("click", () => {
+      const answer = question.nextElementSibling;
+
+      if(answer.style.maxHeight) {
+        // collapse
+        answer.style.maxHeight = null;
+      } else {
+        // expand
+        answer.style.maxHeight = answer.scrollHeight + "px";
+      }
+    });
+  });
+</script>
+
+</body>
+</html>
