@@ -100,7 +100,7 @@ const products = [
     description: "Bow Charm is a delicate crochet accessory designed with simplicity and elegance. Ideal for gifting, decorating, or adding a cute handmade accent to your collection.",
     images: {
       white: "c8-white.jpg",
-      cream: "c8-cream.jpg",
+      beige: "c8-cream.jpg",
       skyblue: "c8-blue.jpg",
       pink: "c8-pink.jpg"
     },
