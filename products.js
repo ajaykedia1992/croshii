@@ -135,7 +135,7 @@ const products = [
   {
     id: "CRS-P011",
     name: "Peony Bouquet",
-    price: 1999,
+    price: 2999,
     description: "Soft and luxurious, the Peony Bouquet is a handcrafted crochet floral arrangement that adds sophistication and charm to any space.",
     images: {
       pink: "c11-pink.jpg",
