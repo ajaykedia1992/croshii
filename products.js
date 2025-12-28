@@ -8,7 +8,7 @@ const products = [
       darkRed: "c1-red.jpg"
     },
     defaultColor: "darkRed",
-    waText: "Orchid Grace (ID: CRS-P001)"
+    waText: "Rose Charm (ID: CRS-P001)"
   },
 
   {
@@ -20,7 +20,7 @@ const products = [
       yellow: "c2-yellow.jpg"
     },
     defaultColor: "yellow",
-    waText: "Blush Bloom (ID: CRS-P002)"
+    waText: "Sunshine Bloom (ID: CRS-P002)"
   },
 
   {
@@ -33,7 +33,7 @@ const products = [
       red: "c3-red.jpg"
     },
     defaultColor: "pink",
-    waText: "Rosette Reverie (ID: CRS-P003)"
+    waText: "Berry Bliss (ID: CRS-P003)"
   },
 
   {
@@ -47,7 +47,7 @@ const products = [
       red: "c4-red.jpg"
     },
     defaultColor: "white",
-    waText: "Petal Bookmark (ID: CRS-P004)"
+    waText: "Lilly of The Valley (ID: CRS-P004)"
   },
 
   {
@@ -59,7 +59,7 @@ const products = [
       yellow: "c5-yellow.jpg"
     },
     defaultColor: "yellow",
-    waText: "Cozy Knot Gift Set (ID: CRS-P005)"
+    waText: "Honey Puff (ID: CRS-P005)"
   },
 
   {
@@ -74,7 +74,7 @@ const products = [
       pink: "c6-pink.jpg"
     },
     defaultColor: "lightblue",
-    waText: "Scarlet Love (ID: CRS-P006)"
+    waText: "Cozy Penguin (ID: CRS-P006)"
   },
 
   {
@@ -90,7 +90,7 @@ const products = [
       red: "c7-red.jpg"
     },
     defaultColor: "lavender",
-    waText: "Meadow Minis (ID: CRS-P007)"
+    waText: "Tulip Keychain (ID: CRS-P007)"
   },
 
   {
@@ -105,7 +105,7 @@ const products = [
       pink: "c8-pink.jpg"
     },
     defaultColor: "white",
-    waText: "Leaflet Haven (ID: CRS-P008)"
+    waText: "Bow Charm (ID: CRS-P008)"
   },
 
   {
@@ -117,7 +117,7 @@ const products = [
       yellow: "c9-yellow.jpg",
     },
     defaultColor: "yellow",
-    waText: "Leaflet Haven (ID: CRS-P008)"
+    waText: "Sunflower Bouquet (ID: CRS-P008)"
   },
 
   {
@@ -129,7 +129,7 @@ const products = [
       cream: "c10-cream.jpg",
     },
     defaultColor: "cream",
-    waText: "Leaflet Haven (ID: CRS-P008)"
+    waText: "Rose Bouquet (ID: CRS-P008)"
   },
 
   {
@@ -141,7 +141,7 @@ const products = [
       pink: "c11-pink.jpg",
     },
     defaultColor: "pink",
-    waText: "Leaflet Haven (ID: CRS-P008)"
+    waText: "Peony Bouquet (ID: CRS-P008)"
   },
 
   {
@@ -153,7 +153,7 @@ const products = [
       lavender: "c12-lavender.jpg",
     },
     defaultColor: "lavender",
-    waText: "Leaflet Haven (ID: CRS-P008)"
+    waText: "Lavender Bouquet (ID: CRS-P008)"
   },
 
   {
@@ -165,7 +165,7 @@ const products = [
       lavender: "c13-lavender.jpg",
     },
     defaultColor: "lavender",
-    waText: "Leaflet Haven (ID: CRS-P008)"
+    waText: "Tulip Bouquet (ID: CRS-P008)"
   },
 
   {
@@ -177,7 +177,7 @@ const products = [
       white: "c19-white.jpg"
     },
     defaultColor: "white",
-    waText: "Leaflet Haven (ID: CRS-P008)"
+    waText: "Daisy Bouquet (ID: CRS-P008)"
   },
 
   {
@@ -189,7 +189,7 @@ const products = [
       white: "c20-white.jpg"
     },
     defaultColor: "white",
-    waText: "Leaflet Haven (ID: CRS-P008)"
+    waText: "Daisy Bookmark (ID: CRS-P008)"
   },
 
   {
@@ -201,7 +201,7 @@ const products = [
       brown: "c14-brown.jpg",
     },
     defaultColor: "brown",
-    waText: "Leaflet Haven (ID: CRS-P008)"
+    waText: "Bear Keychain (ID: CRS-P008)"
   },
 
   {
@@ -218,7 +218,7 @@ const products = [
       yellow: "c15-yellow.jpg"
     },
     defaultColor: "skyblue",
-    waText: "Leaflet Haven (ID: CRS-P008)"
+    waText: "Heart Keychain (ID: CRS-P008)"
   },
 
   {
@@ -230,7 +230,7 @@ const products = [
       white: "c16-white.jpg",
     },
     defaultColor: "white",
-    waText: "Leaflet Haven (ID: CRS-P008)"
+    waText: "Bouquet Blanket (ID: CRS-P008)"
   },
 
   {
@@ -242,7 +242,7 @@ const products = [
       blue: "c17-blue.jpg",
     },
     defaultColor: "blue",
-    waText: "Leaflet Haven (ID: CRS-P008)"
+    waText: "Couple Keychain (ID: CRS-P008)"
   },
 
 
@@ -256,7 +256,7 @@ const products = [
       white: "c18-white.jpg"
     },
     defaultColor: "black",
-    waText: "Leaflet Haven (ID: CRS-P008)"
+    waText: "Ghost Keychain (ID: CRS-P008)"
   },
 
 
