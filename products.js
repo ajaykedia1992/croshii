@@ -117,7 +117,7 @@ const products = [
       yellow: "c9-yellow.jpg",
     },
     defaultColor: "yellow",
-    waText: "Sunflower Bouquet (ID: CRS-P008)"
+    waText: "Sunflower Bouquet (ID: CRS-P009)"
   },
 
   {
@@ -129,7 +129,7 @@ const products = [
       cream: "c10-cream.jpg",
     },
     defaultColor: "cream",
-    waText: "Rose Bouquet (ID: CRS-P008)"
+    waText: "Rose Bouquet (ID: CRS-P010)"
   },
 
   {
@@ -141,7 +141,7 @@ const products = [
       pink: "c11-pink.jpg",
     },
     defaultColor: "pink",
-    waText: "Peony Bouquet (ID: CRS-P008)"
+    waText: "Peony Bouquet (ID: CRS-P011)"
   },
 
   {
@@ -153,7 +153,7 @@ const products = [
       lavender: "c12-lavender.jpg",
     },
     defaultColor: "lavender",
-    waText: "Lavender Bouquet (ID: CRS-P008)"
+    waText: "Lavender Bouquet (ID: CRS-P012)"
   },
 
   {
@@ -165,7 +165,7 @@ const products = [
       lavender: "c13-lavender.jpg",
     },
     defaultColor: "lavender",
-    waText: "Tulip Bouquet (ID: CRS-P008)"
+    waText: "Tulip Bouquet (ID: CRS-P013)"
   },
 
   {
@@ -177,7 +177,7 @@ const products = [
       white: "c19-white.jpg"
     },
     defaultColor: "white",
-    waText: "Daisy Bouquet (ID: CRS-P008)"
+    waText: "Daisy Bouquet (ID: CRS-P014)"
   },
 
   {
@@ -189,7 +189,7 @@ const products = [
       white: "c20-white.jpg"
     },
     defaultColor: "white",
-    waText: "Daisy Bookmark (ID: CRS-P008)"
+    waText: "Daisy Bookmark (ID: CRS-P015)"
   },
 
   {
@@ -201,7 +201,7 @@ const products = [
       brown: "c14-brown.jpg",
     },
     defaultColor: "brown",
-    waText: "Bear Keychain (ID: CRS-P008)"
+    waText: "Bear Keychain (ID: CRS-P016)"
   },
 
   {
@@ -218,7 +218,7 @@ const products = [
       yellow: "c15-yellow.jpg"
     },
     defaultColor: "skyblue",
-    waText: "Heart Keychain (ID: CRS-P008)"
+    waText: "Heart Keychain (ID: CRS-P017)"
   },
 
   {
@@ -230,7 +230,7 @@ const products = [
       white: "c16-white.jpg",
     },
     defaultColor: "white",
-    waText: "Bouquet Blanket (ID: CRS-P008)"
+    waText: "Bouquet Blanket (ID: CRS-P018)"
   },
 
   {
@@ -242,7 +242,7 @@ const products = [
       blue: "c17-blue.jpg",
     },
     defaultColor: "blue",
-    waText: "Couple Keychain (ID: CRS-P008)"
+    waText: "Couple Keychain (ID: CRS-P019)"
   },
 
 
@@ -256,7 +256,7 @@ const products = [
       white: "c18-white.jpg"
     },
     defaultColor: "black",
-    waText: "Ghost Keychain (ID: CRS-P008)"
+    waText: "Ghost Keychain (ID: CRS-P020)"
   },
 
 
