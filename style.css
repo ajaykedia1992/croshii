@@ -63,6 +63,12 @@
     .hero-text {
       padding-top: 30px; /* reserves space so text doesn’t move */
     }
+   .hero-text img.icon {
+      width: 24px;          /* icon size */
+      height: 24px;
+      margin-right: 6px;
+      vertical-align: middle;
+    }
 
     .hero-logo-absolute {
       position: absolute;
