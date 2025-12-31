@@ -199,8 +199,8 @@ Each Croshii creation is thoughtfully made by hand, celebrating natural textures
     <div>
       <h4>Contact</h4>
       <div class="social-link-whatsapp">
-        <a href="https://wa.me/918058447000?text=Hello%2C%20I%20want%20to%20share%20a%20design" 
-      target="_blank"><img src="whatsapp.svg" alt="WhatsApp" class="icon"></a>
+        <a href="#" 
+      target="_blank" onclick="openFooterWhatsApp(event)"><img src="whatsapp.svg" alt="WhatsApp" class="icon"></a>
       </div>
     </div>
     <div class="follow-us">
@@ -298,6 +298,23 @@ Each Croshii creation is thoughtfully made by hand, celebrating natural textures
       "I have a custom crochet design in mind.\n" +
       "I’d like to share a reference image/design with you and get it made.\n\n" +
       "Please let me know the next steps.\n" +
+      "Thank you";
+
+    const phoneNumber = "918058447000";
+    const whatsappURL =
+      "https://wa.me/" + phoneNumber + "?text=" + encodeURIComponent(message);
+
+    window.open(whatsappURL, "_blank");
+  }
+</script>
+<script>
+  function openFooterWhatsApp(event) {
+    event.preventDefault();
+
+    const message =
+      "Hello Croshii Team,\n\n" +
+      "I’d like to know more about your crochet products, pricing, or custom designs.\n\n" +
+      "Please guide me on how I can place an order or share my design ideas.\n\n" +
       "Thank you";
 
     const phoneNumber = "918058447000";
