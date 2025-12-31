@@ -9,6 +9,7 @@ function renderProducts(list){
     card.className = "product-card";
     card.innerHTML = `<img src="${p.images[p.defaultColor]}" alt="${p.name}">
       <h3>${p.name}</h3><small>ID: ${p.id}</small><br><span>₹${p.price}</span>`;
+    card.addEventListener("click", () => openModal(p)); 
     grid.appendChild(card);
   });
 }
