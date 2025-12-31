@@ -399,6 +399,7 @@
       margin-right: 10px;
       vertical-align: middle;
       display: inline-block;
+      filter: brightness(0) invert(1);
     }
 
 
@@ -614,6 +615,12 @@
       vertical-align: middle;
       display: inline-block;
     }
+
+   .instagram-order-now-btn img.icon 
+    {
+      filter: brightness(0) invert(1);
+    }
+
     .follow-us .social-link {
       display: flex;
       align-items: center; /* vertical alignment */
