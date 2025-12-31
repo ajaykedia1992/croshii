@@ -165,10 +165,10 @@
     @media (max-width: 600px) {
       .product-header {
         flex-direction: column;
-        align-items: flex-start; /* left align on mobile */
+        align-items: flex-start; 
       }
       .products-grid {
-        grid-template-columns: 1fr; /* 1 item on mobile */
+        grid-template-columns: 1fr;
       }
     }
 
