@@ -17,9 +17,10 @@
   <div class="logo">croshii</div>
   <nav>
     <a 
-      href="https://wa.me/918058447000?text=Hello%2C%20I%20want%20to%20order%20Product%201" 
+      href="#" 
       target="_blank" 
-      class="order-now-btn "
+      class="order-now-btn"
+      onclick="openHeaderWhatsApp(event)"
     >
     <img src="whatsapp.svg" alt="WhatsApp" class="icon">
       Order Now
@@ -59,9 +60,10 @@ Each Croshii creation is thoughtfully made by hand, celebrating natural textures
 <section class="share-design">
   <p>If you have any other design, share with us on WhatsApp!</p>
   <a 
-    href="https://wa.me/918058447000?text=Hello%2C%20I%20want%20to%20share%20a%20design" 
+    href="#" 
     target="_blank" 
     class="whatsapp-btn"
+    onclick="openCustomDesignWhatsApp(event)
   >
     <img src="whatsapp.svg" alt="WhatsApp" class="icon">
     Share on WhatsApp
@@ -265,6 +267,45 @@ Each Croshii creation is thoughtfully made by hand, celebrating natural textures
       }
     });
   });
+</script>
+<script>
+  function openHeaderWhatsApp(event) {
+    event.preventDefault();
+
+    const message =
+      "Hello Croshii Team,\n\n" +
+      "I’m interested in placing an order and would like to know more about your crochet products.\n\n" +
+      "Could you please help me with:\n" +
+      "- Available designs\n" +
+      "- Pricing\n" +
+      "- Customization options\n" +
+      "- Delivery timeline\n\n" +
+      "Thank you";
+
+    const phoneNumber = "918058447000";
+    const whatsappURL =
+      "https://wa.me/" + phoneNumber + "?text=" + encodeURIComponent(message);
+
+    window.open(whatsappURL, "_blank");
+  }
+</script>
+<script>
+  function openCustomDesignWhatsApp(event) {
+    event.preventDefault();
+
+    const message =
+      "Hello Croshii Team,\n\n" +
+      "I have a custom crochet design in mind.\n" +
+      "I’d like to share a reference image/design with you and get it made.\n\n" +
+      "Please let me know the next steps.\n" +
+      "Thank you";
+
+    const phoneNumber = "918058447000";
+    const whatsappURL =
+      "https://wa.me/" + phoneNumber + "?text=" + encodeURIComponent(message);
+
+    window.open(whatsappURL, "_blank");
+  }
 </script>
 
 <script>
