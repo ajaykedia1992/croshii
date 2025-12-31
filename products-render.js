@@ -1,16 +1,27 @@
+
 const grid = document.getElementById("productsGrid");
+const sortSelect = document.getElementById("sortPrice");
 
-products.forEach(product => {
-  const card = document.createElement("div");
-  card.className = "product-card";
+function renderProducts(list){
+  grid.innerHTML = "";
+  list.forEach(p=>{
+    const card = document.createElement("div");
+    card.className = "product-card";
+    card.innerHTML = `<img src="${p.images[p.defaultColor]}" alt="${p.name}">
+      <h3>${p.name}</h3><small>ID: ${p.id}</small><br><span>₹${p.price}</span>`;
+    grid.appendChild(card);
+  });
+}
 
-  card.innerHTML = `
-    <img src="${product.images[product.defaultColor]}" alt="${product.name}">
-    <h3>${product.name}</h3>
-    <small class="product-id">ID: ${product.id}</small>
-    <span>₹${product.price}</span>
-  `;
+// Initial render
+renderProducts(products);
 
-  card.addEventListener("click", () => openModal(product));
-  grid.appendChild(card);
+// Listen to sort changes
+sortSelect.addEventListener("change", ()=>{
+  let sorted = [...products];
+  const sort = sortSelect.value;
+  if(sort === "asc") sorted.sort((a,b)=>a.price - b.price);
+  else if(sort === "desc") sorted.sort((a,b)=>b.price - a.price);
+
+  renderProducts(sorted);
 });
