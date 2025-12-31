@@ -99,6 +99,10 @@
       color: #000;
       font-size: 14px;
       border-radius: 20px;
+      z-index: 10;
+      cursor: pointer;
+      position: relative;
+      margin-top: 10px;
     }
 
     .hero-image {
