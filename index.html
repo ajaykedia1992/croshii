@@ -56,7 +56,26 @@ Each Croshii creation is thoughtfully made by hand, celebrating natural textures
 </section>
 
 <section class="product-section" id="craft">
-  <h1>Our Products</h1>
+  <div class="product-header">
+    <h1>Our Products</h1>
+
+    <div class="product-filters">
+      <div class="filter-row">
+        <div class="filter-label">
+          <img src="filter.svg" alt="Filter Icon" class="filter-icon">
+          <span>Filter</span>
+        </div>
+        <div class="filter-options">
+          <select id="sortPrice">
+            <option value="none">Recommended</option>
+            <option value="asc">Low to High</option>
+            <option value="desc">High to Low</option>
+          </select>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <div class="products">
     <div class="products-grid" id="productsGrid"></div>
   </div>
