@@ -259,5 +259,53 @@ const products = [
     waText: "Ghost Keychain (ID: CRS-P020)"
   },
 
+  {
+    id: "CRS-P021",
+    name: "Mini Spidey Buddy",
+    price: 499,
+    description: "A tiny crochet companion with big personality! Mini Spidey Buddy is hand-crafted with rich dark-red yarn and charming details that make it instantly lovable. Lightweight and durable, it’s perfect as a keychain, bag charm, or a small collectible for superhero fans and gift-lovers alike.",
+    images: {
+      darkred: "c21-red.jpg",
+    },
+    defaultColor: "darkred",
+    waText: "Mini Spidey Buddy (ID: CRS-P021)"
+  },
+
+  {
+    id: "CRS-P022",
+    name: "Bean Teddy Duo",
+    price: 599,
+    description: "Meet the coziest pair in the Croshii family. Bean Teddy Duo features two soft, bean-shaped teddy bears crocheted in warm brown tones. Their minimal design and cuddly look make them an adorable accessory for keys, backpacks, or a heartfelt handmade gift.",
+    images: {
+      brown: "c22-brown.jpg",
+    },
+    defaultColor: "brown",
+    waText: "Bean Teddy Duo (ID: CRS-P022)"
+  },
+
+  {
+    id: "CRS-P023",
+    name: "Blush Bunny Duo",
+    price: 399,
+    description: "Soft, sweet, and full of charm, the Blush Bunny Duo features two hand-crocheted bunny companions in a clean white finish. Thoughtfully crafted with delicate details, this adorable pair is lightweight and perfect as a keychain, bag charm, or a heartfelt handmade gift.",
+    images: {
+      white: "c23-white.jpg",
+    },
+    defaultColor: "white",
+    waText: "Blush Bunny Duo (ID: CRS-P023)"
+  },
+
+  {
+    id: "CRS-P024",
+    name: "Berry Choco Donut",
+    price: 449,
+    description: "A treat that lasts forever! Berry Choco Donut is a delightful crochet creation inspired by classic dessert tones. Handcrafted with textured detailing and rich brown yarn, it adds a fun, whimsical pop to your keys or bag—no calories included.",
+    images: {
+      brown: "c24-brown.jpg",
+    },
+    defaultColor: "brown",
+    waText: "Berry Choco Donut (ID: CRS-P024)"
+  },
+
 
 ];

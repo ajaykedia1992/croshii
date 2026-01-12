@@ -647,6 +647,10 @@
       display: inline-block;
     }
 
+    header nav .order-now-btn img {
+      filter: brightness(0) invert(1);
+    }
+
    .instagram-order-now-btn img.icon 
     {
       filter: brightness(0) invert(1);
