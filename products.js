@@ -235,8 +235,8 @@ const products = [
 
   {
     id: "CRS-P019",
-    name: "Couple Keychain",
-    price: 399,
+    name: "Couple Keychain Duo",
+    price: 449,
     description: "A charming crochet couple keychain representing togetherness and love. Perfect as a gift for couples or as a meaningful keepsake.",
     images: {
       blue: "c17-blue.jpg",
