@@ -232,7 +232,7 @@ const products = [
     defaultColor: "white",
     waText: "Bouquet Blanket (ID: CRS-P018)"
   },
-
+  
   {
     id: "CRS-P019",
     name: "Couple Keychain Duo",

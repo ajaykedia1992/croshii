@@ -62,23 +62,13 @@ Each Croshii creation is thoughtfully made by hand, celebrating natural textures
   <div class="product-header">
     <h1>Our Products</h1>
 
-    <div class="product-filters">
-      <div class="filter-row">
-        <div class="filter-label">
-          <img src="filter.svg" alt="Filter Icon" class="filter-icon">
-          <span>Filter</span>
-        </div>
-        <div class="filter-options">
-          <select id="sortPrice">
-            <option value="none">Recommended</option>
-            <option value="asc">Low to High</option>
-            <option value="desc">High to Low</option>
-          </select>
-        </div>
-      </div>
-    </div>
+    <select id="sortPrice" class="filter-select">
+      <option value="" selected disabled hidden>Filter</option>
+      <option value="recommended">Recommended</option>
+      <option value="asc">Price: Low to High</option>
+      <option value="desc">Price: High to Low</option>
+    </select>
   </div>
-
   <div class="products">
     <div class="products-grid" id="productsGrid"></div>
   </div>
@@ -238,7 +228,7 @@ Each Croshii creation is thoughtfully made by hand, celebrating natural textures
     </div>
   </div>
   <div class="copyright">
-    &copy; 2026 Croshii. All Rights Reserved.
+    &copy; <span id="year"></span> Croshii. All Rights Reserved.
   </div>
 </footer>
 
@@ -352,7 +342,11 @@ Each Croshii creation is thoughtfully made by hand, celebrating natural textures
   }
 </script>
 
-<!--<script>
+<script>
+  document.getElementById("year").textContent = new Date().getFullYear();
+</script>
+
+<script>
   // Disable right-click context menu
   document.addEventListener("contextmenu", function(e){
     e.preventDefault();
@@ -370,7 +364,7 @@ Each Croshii creation is thoughtfully made by hand, celebrating natural textures
       alert("This action is disabled on this site.");
     }
   });
-</script>-->
+</script>
  <script src="products.js"></script>
 <script src="products-render.js"></script>
 <script src="productModal.js"></script>
