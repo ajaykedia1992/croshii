@@ -266,7 +266,7 @@
       border: 1px solid #ccc;
       background-color: #fff;
 
-      background-image: url("filter1.svg");
+      background-image: url("filter.svg");
       background-repeat: no-repeat;
       background-position: left 12px center; /* ⬅ icon moved left */
       background-size: 16px;
