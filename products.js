@@ -236,7 +236,7 @@ const products = [
   {
     id: "CRS-P019",
     name: "Couple Keychain Duo",
-    price: 449,
+    price: 599,
     description: "A charming crochet couple keychain representing togetherness and love. Perfect as a gift for couples or as a meaningful keepsake.",
     images: {
       blue: "c17-blue.jpg",
@@ -286,7 +286,7 @@ const products = [
   {
     id: "CRS-P023",
     name: "Blush Bunny Duo",
-    price: 399,
+    price: 449,
     description: "Soft, sweet, and full of charm, the Blush Bunny Duo features two hand-crocheted bunny companions in a clean white finish. Thoughtfully crafted with delicate details, this adorable pair is lightweight and perfect as a keychain, bag charm, or a heartfelt handmade gift.",
     images: {
       white: "c23-white.jpg",
