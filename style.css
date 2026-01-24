@@ -15,6 +15,7 @@
       margin: 0;
       padding: 0;
       width: 100%;
+      overflow-x: hidden;
     }
 
     body {
@@ -134,7 +135,7 @@
     /* ---------- PRODUCTS ---------- */
     .products {
       background: #ffffff;
-      padding: 0px 30px;
+      padding: 0;
     }
 
     .products-grid {
@@ -195,16 +196,6 @@
     @media (max-width: 900px) {
       .products-grid {
         grid-template-columns: repeat(3, 1fr); /* 2 items on tablet */
-      }
-    }
-
-    @media (max-width: 600px) {
-      .product-header {
-        flex-direction: column;
-        align-items: flex-start; 
-      }
-      .products-grid {
-        grid-template-columns: 1fr;
       }
     }
 
@@ -778,21 +769,42 @@
 
   /* PRODUCTS */
   .product-section {
-    padding: 10px 20px;
+    padding: 10px 10px;
   }
 
   .products-grid {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     gap: 16px;
+    justify-items: center;
+  }
+
+  .product-header {
+    flex-direction: column;      /* stack heading & filter vertically */
+    align-items: center;         /* center horizontally */
+    gap: 12px;                   /* spacing between heading & filter */
+    text-align: center;           /* optional for heading */
+  }
+
+  .product-header h1 {
+    margin: 0;                   /* remove default margins */
+  }
+
+  .product-filters {
+    justify-content: center;     /* center the dropdown */
+    width: 100%;                 /* optional: make dropdown responsive */
+    max-width: 200px;            /* optional: limit width */
   }
 
   .product-card {
     width: 100%;
     max-width: none;
+    text-align: center;
   }
 
   .product-card .img {
-    width: 400px;
+    width: 100%;
+    max-width: 150px;
+    height: auto;
   }
 
   /* SHARE DESIGN */
