@@ -3,370 +3,347 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Croshii | Crochet for Everyday Living</title>
+  <title>Croshii — Crochet for Everyday Living</title>
+  <meta name="description" content="Handcrafted crochet keychains, bouquets and home pieces. Each Croshii creation is thoughtfully made by hand, celebrating natural textures, slow craft, and timeless warmth." />
 
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet" />
 
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-<div class="shipping-banner">
-🚚 Free Shipping on Orders Above ₹999
-</div>
+  <!-- ═══════════════════════════════════════════════════════
+       ANNOUNCEMENT BAR
+  ═══════════════════════════════════════════════════════ -->
+  <div class="announcement-bar">
+    <span>Free Shipping on Orders Above ₹999 &nbsp;·&nbsp; Handcrafted with Love &nbsp;·&nbsp; Custom Orders Welcome</span>
+  </div>
 
-<div class="site-wrapper">
-
-<header>
-  <div class="logo">croshii</div>
-  <nav>
-    <a 
-      href="#craft" 
-      target="_blank" 
-      class="order-now-btn"
-    >
-    <img src="products.svg" alt="products" class="icon">
-      Browse Collection
-    </a>
-    <!--<a 
-      href="https://ig.me/m/croshii_official" 
-      target="_blank" 
-      class="instagram-order-now-btn"
-    >
-    <img src="instagram.svg" alt="instagram" class="icon">
-      Order Now
-    </a>-->
-  </nav>
-</header>
-
-<section class="hero">
-  <div class="hero-text">
-    <div class="hero-logo-absolute">
-      <img src="logo.png" alt="Croshii">
-    </div>
-    <p>Handcrafted crochet pieces designed for everyday comfort and timeless warmth.
-Each Croshii creation is thoughtfully made by hand, celebrating natural textures, slow craft, and the beauty of imperfection.</p>
-    <a href="#craft" class="btn" target="_blank"><img src="products.svg" alt="WhatsApp" class="icon">
-        Handmade Collection
+  <!-- ═══════════════════════════════════════════════════════
+       NAVIGATION
+  ═══════════════════════════════════════════════════════ -->
+  <header class="site-header" id="site-header">
+    <nav class="nav-inner">
+      <a href="#hero" class="nav-logo">
+        <img src="logo.png" alt="Croshii" class="logo-img" />
       </a>
-      <a href="https://www.instagram.com/croshii_official/"  class="btn" target="_blank"><img src="instagram.svg" alt="instagram" class="icon">
-        Follow Us on Instagram
-      </a>
-  </div>
-  <div class="hero-image">
-    <img src="3.png" alt="Crochet product">
-  </div>
-</section>
+      <ul class="nav-links">
+        <li><a href="#collection">Collection</a></li>
+        <li><a href="#craft">Our Craft</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#faq">FAQ</a></li>
+      </ul>
+      <a href="#collection" class="btn btn-outline nav-cta">Shop Now</a>
+      <button class="nav-hamburger" id="nav-hamburger" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+    </nav>
+    <!-- Mobile menu -->
+    <div class="mobile-menu" id="mobile-menu">
+      <ul>
+        <li><a href="#collection" class="mobile-link">Collection</a></li>
+        <li><a href="#craft" class="mobile-link">Our Craft</a></li>
+        <li><a href="#about" class="mobile-link">About</a></li>
+        <li><a href="#faq" class="mobile-link">FAQ</a></li>
+      </ul>
+    </div>
+  </header>
 
-<section class="product-section" id="craft">
-  <div class="product-header">
-    <h1>Our Products</h1>
-
-    <select id="sortPrice" class="filter-select">
-      <option value="" selected disabled hidden>Filter</option>
-      <option value="recommended">Recommended</option>
-      <option value="asc">Price: Low to High</option>
-      <option value="desc">Price: High to Low</option>
-    </select>
-  </div>
-  <div class="products">
-    <div class="products-grid" id="productsGrid"></div>
-  </div>
-</section>
-
-<section class="share-design">
-  <p>Don’t see what you’re looking for? Share your design idea with us and let’s bring it to life together.</p>
-  <a 
-    href="#" 
-    target="_blank" 
-    class="whatsapp-btn"
-    onclick="openCustomDesignWhatsApp(event)"
-  >
-    <img src="whatsapp.svg" alt="WhatsApp" class="icon">
-    Share on WhatsApp
-  </a>
-  <a 
-    href="https://ig.me/m/croshii_official" 
-    target="_blank" 
-    class="instagram-btn"
-  >
-    <img src="instagram.svg" alt="WhatsApp" class="icon">
-    Share on Instagram
-  </a>
-</section>
-<section class="about-us" id="about-us">
-  <div class="about-image">
-    <img src="aboutus.jpg" alt="About Croshii">
-  </div>
-  <div class="about-text">
-    <h2>About Us</h2>
-    <p>
-      Croshii is a brand dedicated to handcrafted crochet creations designed for everyday living. 
-      Every piece is made with love, celebrating natural textures, slow craft, and timeless warmth. 
-      From bags to home decor, each item is thoughtfully created to bring comfort and beauty into your life.
-    </p>
-    <p>
-      Each Croshii creation is carefully crafted using traditional techniques combined with modern designs, ensuring a perfect balance of style and functionality. 
-      We work closely with skilled artisans who share our passion for quality, sustainability, and attention to detail.
-    </p>
-    <p>
-      Our mission is to connect people with unique, handcrafted products that tell a story and last a lifetime. Whether you are looking for the perfect gift or a statement piece for yourself, Croshii offers a range of products that are versatile, elegant, and timeless. 
-      Join us in our journey of creating beauty through craftsmanship, and discover the joy of owning something truly handmade.
-    </p>
-  </div>
-
-</section>
-<section class="craft-process">
-  <div class="craft-container">
-    <div class="craft-image left-image">
-      <img src="craft3.jpg" alt="Craft Process Left">
+  <!-- ═══════════════════════════════════════════════════════
+       HERO
+  ═══════════════════════════════════════════════════════ -->
+  <section class="hero" id="hero">
+    <div class="hero-media">
+      <img src="p2.jpg" alt="Croshii handcrafted crochet" class="hero-img hero-img--main" />
+      <img src="aboutus.jpg" alt="Artisan at work" class="hero-img hero-img--secondary" />
     </div>
-    <div class="craft-text">
-      <h2>How It’s Made</h2>
-      <p>
-        Every Croshii creation starts with the finest premium wool, hand-selected for its softness and durability. 
-        Our skilled artisans take time to meticulously crochet each piece, ensuring every stitch is perfect and each product is unique.
-      </p>
-      <p>
-        From selecting natural fibers to the final finishing touches, our craft process is rooted in tradition, care, and passion for handmade quality.
-      </p>
-    </div>
-    <div class="craft-image right-image">
-      <img src="craft2.jpg" alt="Craft Process Right">
-    </div>
-  </div>
-</section>
-
-<section class="faq" id="faq">
-  <h2>Frequently Asked Questions</h2>
-  <div class="faq-item">
-    <button class="faq-question">1. What is Croshii?</button>
-    <div class="faq-answer">
-      <p>Croshii is a brand dedicated to handcrafted crochet creations designed for everyday living.</p>
-    </div>
-  </div>
-  <div class="faq-item">
-    <button class="faq-question">2. How can I place an order?</button>
-    <div class="faq-answer">
-      <p>You can place an order by clicking the “Order Now” button on the product page, which opens WhatsApp to contact us directly.</p>
-    </div>
-  </div>
-  <div class="faq-item">
-    <button class="faq-question">3. Do you ship internationally?</button>
-    <div class="faq-answer">
-      <p>Currently, we ship within India only. International shipping may be available in the future.</p>
-    </div>
-  </div>
-  <div class="faq-item">
-    <button class="faq-question">4. What payment methods do you accept?</button>
-    <div class="faq-answer">
-      <p>Orders are confirmed through WhatsApp, and payment can be made via UPI, PayTM, or bank transfer.</p>
-    </div>
-  </div>
-  <div class="faq-item">
-    <button class="faq-question">5. Can I customize a product?</button>
-    <div class="faq-answer">
-      <p>Yes! We accept custom design requests. Use the “Share on WhatsApp” button to send your design.</p>
-    </div>
-  </div>
-  <div class="faq-item">
-    <button class="faq-question">6. How long does delivery take?</button>
-    <div class="faq-answer">
-      <p>Delivery usually takes 15-20 business days within India.</p>
-    </div>
-  </div>
-  <div class="faq-item">
-    <button class="faq-question">7. What is your return policy?</button>
-    <div class="faq-answer">
-      <p>We don't accept return once the product build out. Check out catalog before making an order.</p>
-    </div>
-  </div>
-  <div class="faq-item">
-    <button class="faq-question">8. Are your products eco-friendly?</button>
-    <div class="faq-answer">
-      <p>Yes, we use natural and sustainable materials wherever possible.</p>
-    </div>
-  </div>
-  <div class="faq-item">
-    <button class="faq-question">9. How can I track my order?</button>
-    <div class="faq-answer">
-      <p>You will receive a message on WhatsApp with tracking information once your order is shipped.</p>
-    </div>
-  </div>
-  <div class="faq-item">
-    <button class="faq-question">10. Can I gift Croshii products?</button>
-    <div class="faq-answer">
-      <p>Absolutely! Our products make perfect handcrafted gifts. You can also include a custom note on request.</p>
-    </div>
-  </div>
-</section>
-
-
-<footer>
-  <div class="footer-grid">
-    <div>
-      <h4>Company</h4>
-      <a href="#about-us">About Us</a>
-      <a href="#craft">Our Craft</a>
-    </div>
-    <div>
-      <h4>Customer Care</h4>
-      <a href="#faq">FAQs</a>
-    </div>
-    <div>
-      <h4>Contact</h4>
-      <div class="social-link-whatsapp">
-        <a href="#" 
-      target="_blank" onclick="openFooterWhatsApp(event)"><img src="whatsapp.svg" alt="WhatsApp" class="icon"></a>
+    <div class="hero-content">
+      <p class="hero-eyebrow">Slow Craft · Natural Textures · Timeless Warmth</p>
+      <h1 class="hero-title">Handcrafted<br /><em>for Everyday Living</em></h1>
+      <p class="hero-sub">Each Croshii piece is lovingly made by hand — celebrating the beauty of imperfection, one stitch at a time.</p>
+      <div class="hero-actions">
+        <a href="#collection" class="btn btn-primary">Explore Collection</a>
+        <a href="#craft" class="btn btn-ghost">Our Story</a>
       </div>
     </div>
-    <div class="follow-us">
-      <h4>Follow Us</h4>
-      <div class="social-link">
-        <a href="https://www.instagram.com/croshii_official/" target="_blank"><img src="instagram.svg" alt="instagram" class="icon"></a>
+    <div class="hero-scroll-hint">
+      <span class="scroll-line"></span>
+      <span class="scroll-label">Scroll</span>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════
+       BRAND PILLARS
+  ═══════════════════════════════════════════════════════ -->
+  <section class="pillars">
+    <div class="pillars-inner">
+      <div class="pillar reveal">
+        <div class="pillar-icon">✦</div>
+        <h3>Handmade</h3>
+        <p>Every stitch placed by skilled artisan hands — no machines, no shortcuts.</p>
+      </div>
+      <div class="pillar reveal">
+        <div class="pillar-icon">✦</div>
+        <h3>Natural Fibres</h3>
+        <p>Premium wool and sustainable materials, chosen for softness and longevity.</p>
+      </div>
+      <div class="pillar reveal">
+        <div class="pillar-icon">✦</div>
+        <h3>Made to Order</h3>
+        <p>Custom colours and designs crafted specifically for you, on request.</p>
+      </div>
+      <div class="pillar reveal">
+        <div class="pillar-icon">✦</div>
+        <h3>Gift Ready</h3>
+        <p>Beautifully packaged with a personal note — perfect for every occasion.</p>
       </div>
     </div>
-  </div>
-  <div class="copyright">
-    &copy; <span id="year"></span> Croshii. All Rights Reserved.
-  </div>
-</footer>
+  </section>
 
+  <!-- ═══════════════════════════════════════════════════════
+       COLLECTION
+  ═══════════════════════════════════════════════════════ -->
+  <section class="collection" id="collection">
+    <div class="section-header reveal">
+      <p class="section-eyebrow">Handpicked for You</p>
+      <h2 class="section-title">The Collection</h2>
+      <p class="section-sub">Browse our full range of handcrafted crochet pieces, each made with care and intention.</p>
+    </div>
 
-</div>
-<div class="product-modal" id="productModal">
-  <div class="modal-content">
-    <span class="modal-close" id="modalClose">&times;</span>
+    <!-- Category Filter -->
+    <div class="filter-bar reveal">
+      <button class="filter-btn active" data-filter="all">All Pieces</button>
+      <button class="filter-btn" data-filter="keychains">Keychains &amp; Charms</button>
+      <button class="filter-btn" data-filter="bouquets">Bouquets</button>
+      <button class="filter-btn" data-filter="home">Home</button>
+    </div>
 
-    <div class="modal-body">
-      <!-- LEFT -->
-      <div class="modal-left">
-        <img id="modalImage" src="" alt="Product Image">
+    <!-- Sort -->
+    <div class="sort-bar reveal">
+      <label for="sort-select" class="sort-label">Sort by</label>
+      <select id="sort-select" class="sort-select">
+        <option value="default">Featured</option>
+        <option value="price-asc">Price: Low to High</option>
+        <option value="price-desc">Price: High to Low</option>
+        <option value="name-asc">Name: A–Z</option>
+      </select>
+    </div>
 
-        <div class="color-options" id="colorOptions"></div>
+    <!-- Product Grid -->
+    <div class="product-grid" id="product-grid"></div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════
+       CRAFT STORY
+  ═══════════════════════════════════════════════════════ -->
+  <section class="craft" id="craft">
+    <div class="craft-inner">
+      <div class="craft-images reveal">
+        <img src="craft1.jpg" alt="Artisan crocheting" class="craft-img craft-img--top" />
+        <img src="craft2.jpg" alt="Craft process" class="craft-img craft-img--bottom" />
       </div>
+      <div class="craft-text reveal">
+        <p class="section-eyebrow">The Croshii Way</p>
+        <h2 class="section-title">How Every Piece<br /><em>Comes to Life</em></h2>
+        <p>Every Croshii creation begins with the finest premium wool, hand-selected for its softness and durability. Our skilled artisans take time to meticulously crochet each piece, ensuring every stitch is perfect and every product is unique.</p>
+        <p>From selecting natural fibres to the final finishing touches, our craft process is rooted in tradition, care, and a deep passion for handmade quality. No two pieces are ever exactly alike — that is the beauty of slow craft.</p>
+        <div class="craft-stats">
+          <div class="craft-stat">
+            <span class="stat-number">24+</span>
+            <span class="stat-label">Unique Designs</span>
+          </div>
+          <div class="craft-stat">
+            <span class="stat-number">100%</span>
+            <span class="stat-label">Handmade</span>
+          </div>
+          <div class="craft-stat">
+            <span class="stat-number">∞</span>
+            <span class="stat-label">Custom Options</span>
+          </div>
+        </div>
+        <a href="#collection" class="btn btn-primary">Shop the Collection</a>
+      </div>
+    </div>
+  </section>
 
-      <!-- RIGHT -->
-      <div class="modal-right">
-        <h2 id="modalName"></h2>
-        <small id="modalId"></small>
-        <p class="price" id="modalPrice"></p>
-        <p class="description" id="modalDescription"></p>
+  <!-- ═══════════════════════════════════════════════════════
+       ABOUT
+  ═══════════════════════════════════════════════════════ -->
+  <section class="about" id="about">
+    <div class="about-inner">
+      <div class="about-text reveal">
+        <p class="section-eyebrow">Our Story</p>
+        <h2 class="section-title">About <em>Croshii</em></h2>
+        <p>Croshii is a brand dedicated to handcrafted crochet creations designed for everyday living. Every piece is made with love, celebrating natural textures, slow craft, and timeless warmth. From keychains to home décor, each item is thoughtfully created to bring comfort and beauty into your life.</p>
+        <p>Our mission is to connect people with unique, handcrafted products that tell a story and last a lifetime. Whether you are looking for the perfect gift or a statement piece for yourself, Croshii offers a range of products that are versatile, elegant, and timeless.</p>
+        <div class="about-actions">
+          <a href="https://www.instagram.com" target="_blank" rel="noopener" class="btn btn-outline">Follow on Instagram</a>
+          <a href="https://wa.me/91XXXXXXXXXX" target="_blank" rel="noopener" class="btn btn-ghost">Chat on WhatsApp</a>
+        </div>
+      </div>
+      <div class="about-image reveal">
+        <img src="aboutus.jpg" alt="Croshii artisan at work" />
+        <div class="about-image-caption">Each piece made with love, by hand.</div>
+      </div>
+    </div>
+  </section>
 
-        <div class="modal-actions">
-          <h3>Order Now -> </h3>
-          <a id="modalWhatsapp" target="_blank" class="order-btn">
-            <img src="whatsapp.svg" class="icon">
+  <!-- ═══════════════════════════════════════════════════════
+       CUSTOM ORDER BANNER
+  ═══════════════════════════════════════════════════════ -->
+  <section class="custom-banner reveal">
+    <div class="custom-banner-inner">
+      <p class="section-eyebrow">Bespoke Creations</p>
+      <h2>Don't see what you're looking for?</h2>
+      <p>Share your design idea with us and we'll bring it to life — custom colours, custom sizes, custom everything.</p>
+      <div class="custom-banner-actions">
+        <a href="https://wa.me/91XXXXXXXXXX?text=Hi%20Croshii!%20I%20have%20a%20custom%20design%20request." target="_blank" rel="noopener" class="btn btn-primary">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" style="vertical-align:middle;margin-right:6px"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          Request on WhatsApp
+        </a>
+        <a href="https://www.instagram.com" target="_blank" rel="noopener" class="btn btn-outline">Share on Instagram</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════
+       FAQ
+  ═══════════════════════════════════════════════════════ -->
+  <section class="faq" id="faq">
+    <div class="section-header reveal">
+      <p class="section-eyebrow">Got Questions?</p>
+      <h2 class="section-title">Frequently Asked Questions</h2>
+    </div>
+    <div class="faq-list reveal" id="faq-list">
+      <div class="faq-item">
+        <button class="faq-question">What is Croshii?<span class="faq-icon">+</span></button>
+        <div class="faq-answer"><p>Croshii is a brand dedicated to handcrafted crochet creations designed for everyday living. Every piece is made with love, celebrating natural textures, slow craft, and timeless warmth.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question">How can I place an order?<span class="faq-icon">+</span></button>
+        <div class="faq-answer"><p>Click the "Order on WhatsApp" button on any product to open a pre-filled WhatsApp message. We'll confirm your order and share payment details directly.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question">Do you ship internationally?<span class="faq-icon">+</span></button>
+        <div class="faq-answer"><p>Currently, we ship within India only. International shipping may be available in the future — follow us on Instagram for updates.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question">What payment methods do you accept?<span class="faq-icon">+</span></button>
+        <div class="faq-answer"><p>Orders are confirmed through WhatsApp, and payment can be made via UPI, PayTM, or bank transfer.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question">Can I customise a product?<span class="faq-icon">+</span></button>
+        <div class="faq-answer"><p>Absolutely! We accept custom design requests for colours, sizes, and styles. Use the "Request on WhatsApp" button to share your idea with us.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question">How long does delivery take?<span class="faq-icon">+</span></button>
+        <div class="faq-answer"><p>Delivery usually takes 15–20 business days within India, as each piece is made to order by hand.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question">What is your return policy?<span class="faq-icon">+</span></button>
+        <div class="faq-answer"><p>As each item is handcrafted to order, we do not accept returns once production has begun. Please review the product details and colour options carefully before ordering.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question">Are your products eco-friendly?<span class="faq-icon">+</span></button>
+        <div class="faq-answer"><p>Yes — we use natural and sustainable materials wherever possible, and our slow-craft approach minimises waste.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question">How can I track my order?<span class="faq-icon">+</span></button>
+        <div class="faq-answer"><p>You will receive a WhatsApp message with tracking information once your order is shipped.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question">Can I gift a Croshii product?<span class="faq-icon">+</span></button>
+        <div class="faq-answer"><p>Absolutely! Our products make perfect handcrafted gifts. You can also include a custom note on request — just mention it when placing your order.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════
+       FOOTER
+  ═══════════════════════════════════════════════════════ -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <img src="logo.png" alt="Croshii" class="footer-logo" />
+        <p>Handcrafted crochet pieces<br />designed for everyday living.</p>
+        <div class="footer-social">
+          <a href="https://www.instagram.com" target="_blank" rel="noopener" aria-label="Instagram">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
           </a>
-
-          <a id="modalInstagram" target="_blank" class="order-btn">
-            <img src="instagram.svg" class="icon">
+          <a href="https://wa.me/91XXXXXXXXXX" target="_blank" rel="noopener" aria-label="WhatsApp">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
           </a>
+        </div>
+      </div>
+      <div class="footer-links">
+        <h4>Navigate</h4>
+        <ul>
+          <li><a href="#collection">Collection</a></li>
+          <li><a href="#craft">Our Craft</a></li>
+          <li><a href="#about">About Us</a></li>
+          <li><a href="#faq">FAQ</a></li>
+        </ul>
+      </div>
+      <div class="footer-links">
+        <h4>Categories</h4>
+        <ul>
+          <li><a href="#collection" data-filter-link="keychains">Keychains &amp; Charms</a></li>
+          <li><a href="#collection" data-filter-link="bouquets">Bouquets</a></li>
+          <li><a href="#collection" data-filter-link="home">Home</a></li>
+        </ul>
+      </div>
+      <div class="footer-contact">
+        <h4>Order &amp; Enquiries</h4>
+        <p>All orders are placed via WhatsApp. We respond within 24 hours.</p>
+        <a href="https://wa.me/91XXXXXXXXXX" target="_blank" rel="noopener" class="btn btn-primary footer-wa-btn">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="vertical-align:middle;margin-right:6px"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          Chat with Us
+        </a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2025 Croshii. All rights reserved. Made with love, by hand.</p>
+    </div>
+  </footer>
+
+  <!-- ═══════════════════════════════════════════════════════
+       PRODUCT MODAL
+  ═══════════════════════════════════════════════════════ -->
+  <div class="modal-overlay" id="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+    <div class="modal">
+      <button class="modal-close" id="modal-close" aria-label="Close">&times;</button>
+      <div class="modal-body">
+        <div class="modal-gallery">
+          <img src="" alt="" id="modal-img" class="modal-main-img" />
+          <div class="modal-thumbs" id="modal-thumbs"></div>
+        </div>
+        <div class="modal-info">
+          <p class="modal-id" id="modal-id"></p>
+          <h2 class="modal-title" id="modal-title"></h2>
+          <p class="modal-price" id="modal-price"></p>
+          <p class="modal-desc" id="modal-desc"></p>
+
+          <!-- Colour selector -->
+          <div class="modal-colours" id="modal-colours-wrap">
+            <p class="modal-colours-label">Colour</p>
+            <div class="modal-colour-swatches" id="modal-colour-swatches"></div>
+          </div>
+
+          <a href="#" id="modal-wa-btn" target="_blank" rel="noopener" class="btn btn-primary modal-order-btn">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" style="vertical-align:middle;margin-right:8px"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            Order on WhatsApp
+          </a>
+          <p class="modal-note">Orders confirmed via WhatsApp · Ships within India · 15–20 business days</p>
         </div>
       </div>
     </div>
   </div>
-</div>
 
-<script>
-  const faqQuestions = document.querySelectorAll(".faq-question");
-
-  faqQuestions.forEach((question) => {
-    question.addEventListener("click", () => {
-      const answer = question.nextElementSibling;
-
-      if(answer.style.maxHeight) {
-        // collapse
-        answer.style.maxHeight = null;
-      } else {
-        // expand
-        answer.style.maxHeight = answer.scrollHeight + "px";
-      }
-    });
-  });
-</script>
-<script>
-  function openHeaderWhatsApp(event) {
-    event.preventDefault();
-
-    const message =
-      "Hello Croshii Team,\n\n" +
-      "I’m interested in placing an order and would like to know more about your crochet products.\n\n" +
-      "Could you please help me with:\n" +
-      "- Available designs\n" +
-      "- Pricing\n" +
-      "- Customization options\n" +
-      "- Delivery timeline\n\n" +
-      "Thank you";
-
-    const phoneNumber = "918058447000";
-    const whatsappURL =
-      "https://wa.me/" + phoneNumber + "?text=" + encodeURIComponent(message);
-
-    window.open(whatsappURL, "_blank");
-  }
-</script>
-<script>
-  function openCustomDesignWhatsApp(event) {
-    event.preventDefault();
-
-    const message =
-      "Hello Croshii Team,\n\n" +
-      "I have a custom crochet design in mind.\n" +
-      "I’d like to share a reference image/design with you and get it made.\n\n" +
-      "Please let me know the next steps.\n" +
-      "Thank you";
-
-    const phoneNumber = "918058447000";
-    const whatsappURL =
-      "https://wa.me/" + phoneNumber + "?text=" + encodeURIComponent(message);
-
-    window.open(whatsappURL, "_blank");
-  }
-</script>
-<script>
-  function openFooterWhatsApp(event) {
-    event.preventDefault();
-
-    const message =
-      "Hello Croshii Team,\n\n" +
-      "I’d like to know more about your crochet products, pricing, or custom designs.\n\n" +
-      "Please guide me on how I can place an order or share my design ideas.\n\n" +
-      "Thank you";
-
-    const phoneNumber = "918058447000";
-    const whatsappURL =
-      "https://wa.me/" + phoneNumber + "?text=" + encodeURIComponent(message);
-
-    window.open(whatsappURL, "_blank");
-  }
-</script>
-
-<script>
-  document.getElementById("year").textContent = new Date().getFullYear();
-</script>
-
-<script>
-  // Disable right-click context menu
-  document.addEventListener("contextmenu", function(e){
-    e.preventDefault();
-  });
-
-  // Disable F12, Ctrl+Shift+I, Ctrl+Shift+J, Ctrl+U
-  document.addEventListener("keydown", function(e) {
-    if (
-      e.key === "F12" || // F12
-      (e.ctrlKey && e.shiftKey && e.key === "I") || // Ctrl+Shift+I
-      (e.ctrlKey && e.shiftKey && e.key === "J") || // Ctrl+Shift+J
-      (e.ctrlKey && e.key === "U") // Ctrl+U
-    ) {
-      e.preventDefault();
-      alert("This action is disabled on this site.");
-    }
-  });
-</script>
- <script src="products.js"></script>
-<script src="products-render.js"></script>
-<script src="productModal.js"></script>
+  <!-- Scripts -->
+  <script src="products.js"></script>
+  <script src="app.js"></script>
 </body>
 </html>

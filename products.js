@@ -1,8 +1,33 @@
+/**
+ * Croshii — Product Catalogue
+ * ─────────────────────────────────────────────────────────────
+ * To add a new product, copy one of the objects below and append
+ * it to the `products` array. Keep image filenames consistent
+ * with the files you upload to the same directory as index.html.
+ *
+ * Fields:
+ *   id          — unique product code (e.g. "CRS-P025")
+ *   name        — display name
+ *   price       — price in INR (number, no ₹ symbol)
+ *   category    — one of: "keychains" | "bouquets" | "home"
+ *   badge       — optional label on card e.g. "Bestseller", "New", "Premium", "Gift Pick" — or "" for none
+ *   description — short product description shown in the modal
+ *   images      — object of { colorLabel: "exact-filename.jpg" }
+ *   defaultColor — key from images object to display first
+ *   waText      — text pre-filled in the WhatsApp order message
+ * ─────────────────────────────────────────────────────────────
+ */
+
 const products = [
+
+  // ── KEYCHAINS & CHARMS ──────────────────────────────────────
+
   {
     id: "CRS-P001",
     name: "Rose Charm",
     price: 499,
+    category: "keychains",
+    badge: "Bestseller",
     description: "A handcrafted crochet rose in a wrap, symbolizing love and timeless beauty. Rose Charm adds a graceful touch to your home décor or makes a heartfelt gift for someone special.",
     images: {
       darkRed: "c1-red.jpg"
@@ -15,6 +40,8 @@ const products = [
     id: "CRS-P002",
     name: "Sunshine Bloom",
     price: 499,
+    category: "keychains",
+    badge: "",
     description: "Bright and cheerful, Sunshine Bloom is a crochet flower that brings warmth and positivity into any space. A perfect décor accent to uplift moods and interiors.",
     images: {
       yellow: "c2-yellow.jpg"
@@ -27,7 +54,9 @@ const products = [
     id: "CRS-P003",
     name: "Berry Bliss",
     price: 299,
-    description: "Berry Bliss is a delicately handcrafted crochet bloom with rich, romantic hues. Designed to add charm and softness, it’s ideal for gifting or cozy corners.",
+    category: "keychains",
+    badge: "",
+    description: "Berry Bliss is a delicately handcrafted crochet bloom with rich, romantic hues. Designed to add charm and softness, it's ideal for gifting or cozy corners.",
     images: {
       pink: "c3-pink.jpg",
       red: "c3-red.jpg"
@@ -40,7 +69,9 @@ const products = [
     id: "CRS-P004",
     name: "Lilly of The Valley",
     price: 299,
-    description: "Inspired by nature’s elegance, Lilly of The Valley is a refined crochet creation that reflects purity and grace. Perfect for adding personality to keys, bags, or gifts.",
+    category: "keychains",
+    badge: "",
+    description: "Inspired by nature's elegance, Lilly of The Valley is a refined crochet creation that reflects purity and grace. Perfect for adding personality to keys, bags, or gifts.",
     images: {
       white: "c4-white.jpg",
       pink: "c4-pink.jpg",
@@ -54,6 +85,8 @@ const products = [
     id: "CRS-P005",
     name: "Honey Puff",
     price: 499,
+    category: "keychains",
+    badge: "",
     description: "Honey Puff is a warm, cozy crochet creation crafted with soft textures and gentle colors. Perfect for adding a comforting, handmade touch to your space.",
     images: {
       yellow: "c5-yellow.jpg"
@@ -66,6 +99,8 @@ const products = [
     id: "CRS-P006",
     name: "Cozy Penguin",
     price: 299,
+    category: "keychains",
+    badge: "",
     description: "An adorable crochet penguin made to spread joy and warmth. Cozy Penguin is perfect as a playful décor piece or a cute handcrafted gift for all ages.",
     images: {
       lightblue: "c6-blue.jpg",
@@ -81,6 +116,8 @@ const products = [
     id: "CRS-P007",
     name: "Tulip Keychain",
     price: 499,
+    category: "keychains",
+    badge: "Bestseller",
     description: "A charming crochet tulip keychain that adds a touch of floral elegance to your keys or bags. Lightweight, colorful, and perfect for everyday use.",
     images: {
       lavender: "c7-lavender.jpg",
@@ -97,6 +134,8 @@ const products = [
     id: "CRS-P008",
     name: "Bow Charm",
     price: 299,
+    category: "keychains",
+    badge: "",
     description: "Bow Charm is a delicate crochet accessory designed with simplicity and elegance. Ideal for gifting, decorating, or adding a cute handmade accent to your collection.",
     images: {
       white: "c8-white.jpg",
@@ -109,81 +148,11 @@ const products = [
   },
 
   {
-    id: "CRS-P009",
-    name: "Sunflower Bouquet",
-    price: 1599,
-    description: "Bright and everlasting, the Sunflower Bouquet captures the beauty of blooming sunflowers in crochet form. A cheerful décor piece that never fades.",
-    images: {
-      yellow: "c9-yellow.jpg",
-    },
-    defaultColor: "yellow",
-    waText: "Sunflower Bouquet (ID: CRS-P009)"
-  },
-
-  {
-    id: "CRS-P010",
-    name: "Rose Bouquet",
-    price: 799,
-    description: "A timeless crochet rose bouquet crafted to express love and elegance. Perfect for gifting on special occasions or adding romance to your décor.",
-    images: {
-      cream: "c10-cream.jpg",
-    },
-    defaultColor: "cream",
-    waText: "Rose Bouquet (ID: CRS-P010)"
-  },
-
-  {
-    id: "CRS-P011",
-    name: "Peony Bouquet",
-    price: 2999,
-    description: "Soft and luxurious, the Peony Bouquet is a handcrafted crochet floral arrangement that adds sophistication and charm to any space.",
-    images: {
-      pink: "c11-pink.jpg",
-    },
-    defaultColor: "pink",
-    waText: "Peony Bouquet (ID: CRS-P011)"
-  },
-
-  {
-    id: "CRS-P012",
-    name: "Lavender Bouquet",
-    price: 1099,
-    description: "Inspired by calming lavender fields, this crochet bouquet brings serenity and gentle beauty into your home. Ideal for peaceful and cozy interiors.",
-    images: {
-      lavender: "c12-lavender.jpg",
-    },
-    defaultColor: "lavender",
-    waText: "Lavender Bouquet (ID: CRS-P012)"
-  },
-
-  {
-    id: "CRS-P013",
-    name: "Tulip Bouquet",
-    price: 2499,
-    description: "A beautifully handcrafted crochet tulip bouquet that symbolizes freshness and elegance. Perfect for gifting or brightening up any corner.",
-    images: {
-      lavender: "c13-lavender.jpg",
-    },
-    defaultColor: "lavender",
-    waText: "Tulip Bouquet (ID: CRS-P013)"
-  },
-
-  {
-    id: "CRS-P014",
-    name: "Daisy Bouquet",
-    price: 999,
-    description: "Fresh and joyful, the Daisy Bouquet is a crochet floral arrangement that represents purity and happiness. A lovely handmade décor piece.",
-    images: {
-      white: "c19-white.jpg"
-    },
-    defaultColor: "white",
-    waText: "Daisy Bouquet (ID: CRS-P014)"
-  },
-
-  {
     id: "CRS-P015",
     name: "Daisy Bookmark",
     price: 499,
+    category: "keychains",
+    badge: "",
     description: "A delicate crochet daisy bookmark designed for book lovers. Lightweight and elegant, it adds a touch of handmade charm to every page.",
     images: {
       white: "c20-white.jpg"
@@ -196,9 +165,11 @@ const products = [
     id: "CRS-P016",
     name: "Bear Keychain",
     price: 399,
+    category: "keychains",
+    badge: "",
     description: "An adorable crochet bear keychain crafted with love. Soft, cute, and durable — perfect for adding personality to keys, bags, or gifts. (Price for per piece)",
     images: {
-      brown: "c14-brown.jpg",
+      brown: "c14-brown.jpg"
     },
     defaultColor: "brown",
     waText: "Bear Keychain (ID: CRS-P016)"
@@ -208,6 +179,8 @@ const products = [
     id: "CRS-P017",
     name: "Heart Keychain",
     price: 199,
+    category: "keychains",
+    badge: "",
     description: "A heartfelt crochet keychain symbolizing love and warmth. Available in multiple colors, it makes a thoughtful handmade gift or daily accessory.",
     images: {
       skyblue: "c15-sky.jpg",
@@ -222,34 +195,25 @@ const products = [
   },
 
   {
-    id: "CRS-P018",
-    name: "Bouquet Blanket",
-    price: 4999,
-    description: "A unique crochet blanket inspired by floral bouquets. Soft, cozy, and artistic — designed to bring warmth and handcrafted beauty into your living space.",
-    images: {
-      white: "c16-white.jpg",
-    },
-    defaultColor: "white",
-    waText: "Bouquet Blanket (ID: CRS-P018)"
-  },
-  
-  {
     id: "CRS-P019",
     name: "Couple Keychain Duo",
     price: 599,
+    category: "keychains",
+    badge: "Gift Pick",
     description: "A charming crochet couple keychain representing togetherness and love. Perfect as a gift for couples or as a meaningful keepsake.",
     images: {
-      blue: "c17-blue.jpg",
+      blue: "c17-blue.jpg"
     },
     defaultColor: "blue",
-    waText: "Couple Keychain (ID: CRS-P019)"
+    waText: "Couple Keychain Duo (ID: CRS-P019)"
   },
-
 
   {
     id: "CRS-P020",
     name: "Ghost Keychain",
     price: 299,
+    category: "keychains",
+    badge: "",
     description: "A playful and quirky crochet ghost keychain crafted with attention to detail. Fun, lightweight, and perfect for adding a cute twist to everyday accessories.",
     images: {
       black: "c18-black.jpg",
@@ -263,9 +227,11 @@ const products = [
     id: "CRS-P021",
     name: "Mini Spidey Buddy",
     price: 499,
-    description: "A tiny crochet companion with big personality! Mini Spidey Buddy is hand-crafted with rich dark-red yarn and charming details that make it instantly lovable. Lightweight and durable, it’s perfect as a keychain, bag charm, or a small collectible for superhero fans and gift-lovers alike.",
+    category: "keychains",
+    badge: "Fan Favourite",
+    description: "A tiny crochet companion with big personality! Mini Spidey Buddy is hand-crafted with rich dark-red yarn and charming details that make it instantly lovable. Lightweight and durable, it's perfect as a keychain, bag charm, or a small collectible for superhero fans and gift-lovers alike.",
     images: {
-      darkred: "c21-red.jpg",
+      darkred: "c21-red.jpg"
     },
     defaultColor: "darkred",
     waText: "Mini Spidey Buddy (ID: CRS-P021)"
@@ -275,9 +241,11 @@ const products = [
     id: "CRS-P022",
     name: "Bean Teddy Duo",
     price: 599,
+    category: "keychains",
+    badge: "",
     description: "Meet the coziest pair in the Croshii family. Bean Teddy Duo features two soft, bean-shaped teddy bears crocheted in warm brown tones. Their minimal design and cuddly look make them an adorable accessory for keys, backpacks, or a heartfelt handmade gift.",
     images: {
-      brown: "c22-brown.jpg",
+      brown: "c22-brown.jpg"
     },
     defaultColor: "brown",
     waText: "Bean Teddy Duo (ID: CRS-P022)"
@@ -287,9 +255,11 @@ const products = [
     id: "CRS-P023",
     name: "Blush Bunny Duo",
     price: 449,
+    category: "keychains",
+    badge: "",
     description: "Soft, sweet, and full of charm, the Blush Bunny Duo features two hand-crocheted bunny companions in a clean white finish. Thoughtfully crafted with delicate details, this adorable pair is lightweight and perfect as a keychain, bag charm, or a heartfelt handmade gift.",
     images: {
-      white: "c23-white.jpg",
+      white: "c23-white.jpg"
     },
     defaultColor: "white",
     waText: "Blush Bunny Duo (ID: CRS-P023)"
@@ -299,13 +269,116 @@ const products = [
     id: "CRS-P024",
     name: "Berry Choco Donut",
     price: 449,
+    category: "keychains",
+    badge: "New",
     description: "A treat that lasts forever! Berry Choco Donut is a delightful crochet creation inspired by classic dessert tones. Handcrafted with textured detailing and rich brown yarn, it adds a fun, whimsical pop to your keys or bag—no calories included.",
     images: {
-      brown: "c24-brown.jpg",
+      brown: "c24-brown.jpg"
     },
     defaultColor: "brown",
     waText: "Berry Choco Donut (ID: CRS-P024)"
   },
 
+  // ── BOUQUETS ────────────────────────────────────────────────
+
+  {
+    id: "CRS-P009",
+    name: "Sunflower Bouquet",
+    price: 1599,
+    category: "bouquets",
+    badge: "",
+    description: "Bright and everlasting, the Sunflower Bouquet captures the beauty of blooming sunflowers in crochet form. A cheerful décor piece that never fades.",
+    images: {
+      yellow: "c9-yellow.jpg"
+    },
+    defaultColor: "yellow",
+    waText: "Sunflower Bouquet (ID: CRS-P009)"
+  },
+
+  {
+    id: "CRS-P010",
+    name: "Rose Bouquet",
+    price: 799,
+    category: "bouquets",
+    badge: "Bestseller",
+    description: "A timeless crochet rose bouquet crafted to express love and elegance. Perfect for gifting on special occasions or adding romance to your décor.",
+    images: {
+      cream: "c10-cream.jpg"
+    },
+    defaultColor: "cream",
+    waText: "Rose Bouquet (ID: CRS-P010)"
+  },
+
+  {
+    id: "CRS-P011",
+    name: "Peony Bouquet",
+    price: 2999,
+    category: "bouquets",
+    badge: "Premium",
+    description: "Soft and luxurious, the Peony Bouquet is a handcrafted crochet floral arrangement that adds sophistication and charm to any space.",
+    images: {
+      pink: "c11-pink.jpg"
+    },
+    defaultColor: "pink",
+    waText: "Peony Bouquet (ID: CRS-P011)"
+  },
+
+  {
+    id: "CRS-P012",
+    name: "Lavender Bouquet",
+    price: 1099,
+    category: "bouquets",
+    badge: "",
+    description: "Inspired by calming lavender fields, this crochet bouquet brings serenity and gentle beauty into your home. Ideal for peaceful and cozy interiors.",
+    images: {
+      lavender: "c12-lavender.jpg"
+    },
+    defaultColor: "lavender",
+    waText: "Lavender Bouquet (ID: CRS-P012)"
+  },
+
+  {
+    id: "CRS-P013",
+    name: "Tulip Bouquet",
+    price: 2499,
+    category: "bouquets",
+    badge: "Premium",
+    description: "A beautifully handcrafted crochet tulip bouquet that symbolizes freshness and elegance. Perfect for gifting or brightening up any corner.",
+    images: {
+      lavender: "c13-lavender.jpg"
+    },
+    defaultColor: "lavender",
+    waText: "Tulip Bouquet (ID: CRS-P013)"
+  },
+
+  {
+    id: "CRS-P014",
+    name: "Daisy Bouquet",
+    price: 999,
+    category: "bouquets",
+    badge: "",
+    description: "Fresh and joyful, the Daisy Bouquet is a crochet floral arrangement that represents purity and happiness. A lovely handmade décor piece.",
+    images: {
+      white: "c19-white.jpg"
+    },
+    defaultColor: "white",
+    waText: "Daisy Bouquet (ID: CRS-P014)"
+  },
+
+  // ── HOME ────────────────────────────────────────────────────
+
+  {
+    id: "CRS-P018",
+    name: "Bouquet Blanket",
+    price: 4999,
+    category: "home",
+    badge: "Signature",
+    description: "A unique crochet blanket inspired by floral bouquets. Soft, cozy, and artistic — designed to bring warmth and handcrafted beauty into your living space.",
+    images: {
+      white: "c16-white.jpg"
+    },
+    defaultColor: "white",
+    waText: "Bouquet Blanket (ID: CRS-P018)"
+  }
 
 ];
